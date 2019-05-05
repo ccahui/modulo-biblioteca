@@ -12,6 +12,8 @@ hbs.registerPartials(__dirname + '/views/components');
 app.set('view engine', 'hbs');
 // Helpers
 
+// RUTAS DE USUARIO Y DEMAS
+app.use(require('./server/routes/index'))
 
 app.get('/', function (req, res) {
     res.render('home', {
