@@ -6,8 +6,13 @@ const app = express();
 // =======================================
 
 app.get('/usuario', function (req, res) {
-    res.render('home', {
+    res.render('usuario', {
         nombre: 'Cristian Cahui /Usuario',
+        people: [
+            {firstName: "Yehuda", lastName: "Katz"},
+            {firstName: "Carl", lastName: "Lerche"},
+            {firstName: "Alan", lastName: "Johnson"}
+          ]
     });
 })
 module.exports = app;
