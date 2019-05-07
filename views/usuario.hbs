@@ -1,24 +1,59 @@
 {{> head}}
 {{> navbar}}
 
-<div class="jumbotron">
-    <h1 class="display-4">Hello, {{ nombre }}!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-        featured content or information.</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more saddasdsaa</a>
-</div>
 <div class="container">
-    <ul>
-       <ul class="people_list">
-  {{#each people}}
-  <li>{{ this.firstName}} - {{this.lastName}}</li>
-  {{/each}}
-</ul>
-    </ul>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Registro de Usuarios</h5>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each usuarios}}
+
+                            <tr>
+                                <th scope="row">{{ i }}</th>
+                                <td>{{this.nombre}}</td>
+                                <td>{{this.apellido}}</td>
+                            </tr>
+                            {{/each}}
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mt-4">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Registrar Usuario</h5>
+                    <form method="post" action="/usuario">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Nombre</label>
+                            <input type="text" class="form-control form-control-sm" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Apellido</label>
+                            <input type="text" class="form-control form-control-sm" name="apellido">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
 </div>
 
 {{> footer }}
-
-
