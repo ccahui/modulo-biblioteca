@@ -4,6 +4,10 @@ Instalar con:
 ```
 npm install
 ```
+## Se require instalar MongoDB y que se este EJECUTANDO en el puerto 27017
+```
+mongod --port 27017
+```
 ## Iniciando forma 1
 Luego de la descarga de las dependencias, incluida las dependencias de DESARROLLO (nodemon):
 ```
