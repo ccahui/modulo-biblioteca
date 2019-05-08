@@ -1,0 +1,39 @@
+{{> head}}
+{{> navbar}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Busqueda: <i>{{busqueda}}</i></h5>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Titulo</th>
+                                <th scope="col">Autor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each libros}}
+
+                            <tr>
+                                <th scope="row">{{ i }}</th>
+                                <td>{{this.titulo}}</td>
+                                <td>{{this.autor}}</td>
+                            </tr>
+                            {{/each}}
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+</div>
+{{> footer}}

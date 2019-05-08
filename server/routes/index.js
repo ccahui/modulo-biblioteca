@@ -6,5 +6,6 @@ const app = express();
 // =======================================
 app.use(require('./usuario'));
 app.use(require('./libro'));
+app.use(require('./buscador'));
 
 module.exports = app;
