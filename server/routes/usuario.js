@@ -12,7 +12,7 @@ app.get('/usuario', function (req, res) {
             console.log('Error GET: /usuario')
             usuarios = [];
         }
-        res.render('usuario', {
+        res.render('usuario/usuario', {
             usuarios
         });
 

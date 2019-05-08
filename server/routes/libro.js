@@ -12,7 +12,7 @@ app.get('/libro', function (req, res) {
             console.log('Error GET: /Libro')
             libros = [];
         }
-        res.render('libro', {
+        res.render('libro/libro', {
             libros
         });
 
