@@ -21,6 +21,9 @@ let usuarioSchema = new Schema({
     collection: 'usuarios'
 });
 
+
+
+
 // =======================================
 //  Eliminar un campo que se retorna a el frontEnd
 // =======================================
