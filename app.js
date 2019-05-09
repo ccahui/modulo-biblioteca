@@ -47,11 +47,7 @@ app.get('/', function (req, res) {
     });
 })
 
-app.get('/about', function (req, res) {
-    res.render('about', {
-        nombre: 'Cristian Cahui',
-    });
-})
+
 
 app.listen(PORT, () => {
     console.log(`Escuchando con el puerto ${ PORT }`);

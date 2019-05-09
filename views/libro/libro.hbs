@@ -16,6 +16,7 @@
                                 <th scope="col">Editorial</th>
                                 <th scope="col">Año de Publicación</th>
                                 <th scope="col"></th>
+                                <th scope="col"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -31,8 +32,9 @@
                                     {{#if this.pdf}}
                                     <a href="/archivos?id={{this.pdf}}">Ver Documento</a>
                                     {{/if}}
-
+                                    
                                 </td>
+                                <td><a href="/libro/editar?id={{this._id}}">Editar</a></td>
                             </tr>
                             {{/each}}
 
