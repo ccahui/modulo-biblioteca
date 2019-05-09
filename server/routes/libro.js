@@ -17,7 +17,13 @@ app.get('/libro', function (req, res) {
         });
 
     });
-})
+});
+
+app.get('/libro/registrar', function (req, res) {
+
+        res.render('libro/crear');
+});
+
 app.post('/libro',function(req, res){
     let data = req.body;
     console.log(data)

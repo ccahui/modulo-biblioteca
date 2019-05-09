@@ -8,10 +8,17 @@ let Schema = mongoose.Schema;
 let libroSchema = new Schema({
     titulo: {
         type: String,
-        },
+    },
     autor: {
         type: String,
-    }
+    },
+    editorial: {
+        type: String,
+    },
+    anio: {
+        type: String,
+    },
+
 }, {
     collection: 'libros'
 });
