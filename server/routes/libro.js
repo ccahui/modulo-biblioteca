@@ -20,8 +20,16 @@ app.get('/libro', function (req, res) {
 });
 
 app.get('/libro/registrar', function (req, res) {
+    Libro.find({}, (err, libros) => {
+        if (err) {
+            console.log('Error GET: /Libro')
+            libros = [];
+        }
+        res.render('libro/crear', {
+            libros
+        });
 
-        res.render('libro/crear');
+    });
 });
 
 app.post('/libro',function(req, res){

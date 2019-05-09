@@ -15,6 +15,7 @@
                                 <th scope="col">Autor</th>
                                 <th scope="col">Editorial</th>
                                 <th scope="col">Año de Publicación</th>
+                                <th scope="col"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -26,11 +27,17 @@
                                 <td>{{this.autor}}</td>
                                 <td>{{this.editorial}}</td>
                                 <td>{{this.anio}}</td>
+                                <td>
+                                    {{#if this.pdf}}
+                                    <a href="/archivos?id={{this.pdf}}">Ver Documento</a>
+                                    {{/if}}
+
+                                </td>
                             </tr>
                             {{/each}}
 
                         </tbody>
-                        
+
                     </table>
                 </div>
             </div>

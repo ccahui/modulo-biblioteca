@@ -18,6 +18,9 @@ let libroSchema = new Schema({
     anio: {
         type: String,
     },
+    pdf:{
+        type: String,
+    }
 
 }, {
     collection: 'libros'

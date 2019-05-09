@@ -7,5 +7,8 @@ const app = express();
 app.use(require('./usuario'));
 app.use(require('./libro'));
 app.use(require('./buscador'));
+app.use(require('./upload'));
+app.use(require('./archivos'));
+
 
 module.exports = app;

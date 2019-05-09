@@ -30,6 +30,33 @@
                 </div>
             </div>
         </div>
+
+        <div class="col-md-6 mt-4">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Subir Documento PDF</h5>
+                    <form method="post" action="/upload/libro" enctype="multipart/form-data">
+
+
+                        <select class="form-control" name="id">
+
+                            {{#each libros}}
+                            <option value="{{this._id}}">{{this.titulo}}</option>
+                            {{/each}}
+
+
+                        </select>
+
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">Archivo a Subir</label>
+                            <input type="file" class="form-control-file" name="archivo" id="exampleFormControlFile1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
 
