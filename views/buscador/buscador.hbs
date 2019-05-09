@@ -3,7 +3,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-10">
             <div class="card mt-4">
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold">Busqueda: <i>{{busqueda}}</i></h5>
@@ -13,25 +13,35 @@
                                 <th scope="col">#</th>
                                 <th scope="col">Titulo</th>
                                 <th scope="col">Autor</th>
+                                <th scope="col">Editorial</th>
+                                <th scope="col">Anio</th>
+                                <th scope="col"></th>
                             </tr>
                         </thead>
                         <tbody>
-                            {{#each libros}}
 
+                            {{#each libros}}
                             <tr>
                                 <th scope="row">{{ i }}</th>
                                 <td>{{this.titulo}}</td>
                                 <td>{{this.autor}}</td>
+                                <td>{{this.editorial}}</td>
+                                <td>{{this.anio}}</td>
+                                <td>
+                                    {{#if this.pdf}}
+                                    <a href="/archivos?id={{this.pdf}}">Ver Documento</a>
+                                    {{/if}}
+
+                                </td>
                             </tr>
                             {{/each}}
-
 
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-        
+
     </div>
 
 

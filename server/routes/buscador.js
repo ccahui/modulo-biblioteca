@@ -16,6 +16,10 @@ app.get('/buscar/libro/:busqueda', function (req, res) {
             'titulo': regExp
         }, {
             'autor': regExp
+        },  {
+            'anio': regExp
+        }, {
+            'editorial': regExp
         }]).exec((err, libros) => {
             if (err) {
                 console.log('Error GET: /buscar/libro:busqueda')
